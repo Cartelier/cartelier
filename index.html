@@ -2,33 +2,55 @@
 <html lang="en">
   <head>
 	<title> Hi-Scores </title>
-	<link rel="icon" type="image/x-icon" href="C:\Users\PC\Downloads\HiScoresLogo.png">
+	<link rel="icon" type="image/x-icon" href="C:\Users\PC\Downloads\NewHiScoresLogo.png">
 	<style>
+	<!--colors:#fb1467(red) #o4ffff (cyan) #004aad (blue)-->
+	*{
+	margin:0;
+	}
+	
+	#Container{
+	width: 100%;
+    height: auto;
+	}
+	
+	#bg video{
+	min-width: 100%;
+    position: fixed;
+	min-height: 100%;
+    width: auto;
+    height: 1000px;
+    z-index: -999;
+	}
+	
 	body {
-	margin: 0;
+	margin:0;
 	font-family: Arial, sans-serif;
 	}
 	
 	.nav {
-	overflow: hidden;
+	overflow: auto;
 	background-color:white;
 	}
 	
 	.nav a {
 	float: left;
-	color: black;
+	color: #004aad;
 	text-align: center;
 	padding: 36px 36px;
 	font-size: 24px;
+	cursor: pointer;
+	font-family: Arial, sans-serif;
 	}
 
 	.nav a:hover {
-	background-color: black;
+	background-color: #004aad;
 	color: white;
+	cursor: pointer;
 	}
-
+	
 	.nav a.active {
-	background-color: black;
+	background-color: #004aad;
 	color: white;
 	}
 	
@@ -40,7 +62,7 @@
 	
 	aside {
 	float: left;
-	color: black;
+	color: #004aad;
 	text-align: left;
 	padding: 16px 16px;
 	font-size: 16px;
@@ -55,13 +77,13 @@
 	aside li:hover{
 	color:purple;
 	text-decoration: underline;
+	cursor: pointer;
 	}
 	
 	article {
 	float: left;
 	padding: 20px;
 	width: 55%;
-	background-color: black;
 	height: 400px;
 	color: white;
 	}
@@ -69,13 +91,15 @@
 	footer{
 	overflow: hidden;
 	background-color:white;
+	width: 100%;
 	}
 	
 	footer p{
-	float: right;
-	color: black;
+	color: #004aad;
+	font-family:Arial;
 	padding: 3px;
 	font-size: 10px;
+	float: right;
 	}
 	
 	section::after {
@@ -83,17 +107,22 @@
 	display: table;
 	clear: both;
 	}
+	
 	</style>
   </head>
-  <body style="background-color:#B0B0B0">
-	<div class="nav"> 
-	<img src="HiScoresLogo.png" style="float:left;width:100px;height:100px;padding-right:36px">
+  <body>
+	<div id="Container">
+	<section id="bg"">
+	<video src="C:\Users\PC\Downloads\HiScoresBG.mp4" muted autoplay loop></video>
+	</section>
+	<div class="nav pointer""> 
+	<img src="C:\Users\PC\Downloads\NewHiScoresLogo.png" style="float:left;width:100px;height:100px;padding-right:36px">
 	<a class="active">Home</a> 
 	<a>About</a> 
 	<a>Contact</a>
 	</div>
 	<br>
-	<section> 
+	<section style="font-family: Arial, sans-serif"> 
 		<aside> 
 		<ul>
 		Games by franchise:
@@ -140,6 +169,6 @@
 	<footer>
 	<p> by Von Adriel Vardeleon, 2023 </p>
 	</footer>
-	
+	</div>
   </body>
 </html>
