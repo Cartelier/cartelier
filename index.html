@@ -14,6 +14,11 @@
     height: auto;
 	}
 	
+	#Embedded iframe{
+	width:100%;
+	height:400px;
+	}
+	
 	#bg video{
 	min-width: 100%;
     position: fixed;
@@ -44,13 +49,13 @@
 	}
 
 	.nav a:hover {
-	background-color: #004aad;
+	background-color: #fb1467;
 	color: white;
 	cursor: pointer;
 	}
 	
 	.nav a.active {
-	background-color: #004aad;
+	background-color: #fb1467;
 	color: white;
 	}
 	
@@ -66,7 +71,7 @@
 	text-align: left;
 	padding: 16px 16px;
 	font-size: 16px;
-	height: 408px;
+	height: 60%;
 	}
 	
 	aside ul {
@@ -84,8 +89,9 @@
 	float: left;
 	padding: 20px;
 	width: 55%;
-	height: 400px;
+	height: 60%;
 	color: white;
+	background-color: rgba(128,128,128,0.5)
 	}
 
 	footer{
@@ -163,6 +169,34 @@
 		Care shall be exercised in making sure that the main singers and composers are credited for their work.
 		If a game series that you think has great music is not on here, please contact the creator through the information in the contact page.
 		</p>
+		<hr />
+		<h2>Latest News</h2>
+		<h1>Persona 3 Reload</h1>
+		<p>Atlus has released several new trailers for the Persona 3 remake, and the soundtrack seems to be every bit as promising as the game itself.</p>
+		<button type="button" onclick="myFunction()">Next Trailer</button>
+		<p><p/>
+		<div id="Embedded">
+		<iframe id="trailer1" src="https://www.youtube.com/embed/j56tGNuOqfM" title="Persona 3 Reload — Conflicting Fates Trailer | Xbox Game Pass, Xbox Series X|S, Xbox One, Windows PC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>1</iframe>
+		</div>
+		<script>
+	function myFunction() { 
+	if(document.getElementById("trailer1").innerHTML=="2"){
+	document.getElementById("trailer1").innerHTML="3";
+	document.getElementById("trailer1").src="https://www.youtube.com/embed/04TTnLYVaa0";
+	document.getElementById("trailer1").title="Persona 3 Reload — Meet the S.E.E.S. Trailer | Xbox Game Pass, Xbox Series X|S, Xbox One, Windows PC";
+	}
+	else if (document.getElementById("trailer1").innerHTML=="3"){
+	document.getElementById("trailer1").innerHTML="1";
+	document.getElementById("trailer1").src="https://www.youtube.com/embed/j56tGNuOqfM";
+	document.getElementById("trailer1").title="Persona 3 Reload — Conflicting Fates Trailer | Xbox Game Pass, Xbox Series X|S, Xbox One, Windows PC";
+	}
+	else{
+	document.getElementById("trailer1").title="Persona 3 Reload — Battle BGM &amp; Gameplay Reveal | Xbox Game Pass, Xbox Series X|S, Xbox One, Windows";
+	document.getElementById("trailer1").src="https://www.youtube.com/embed/3wcKA9nqyY0";
+	document.getElementById("trailer1").innerHTML="2";
+	}
+  }	
+	</script>
 		</article>
 	</section>
 	<br>
