@@ -197,6 +197,8 @@
 		Care shall be exercised in making sure that the main singers and composers are credited for their work.
 		If a game series that you think has great music is not on here, please contact the creator through the information in the contact page.
 		</p>
+		<button class="myBtn" type="button" onclick="showResume()">About the Creator</button>
+		<img id="resume" src="" style="">
 		<hr />
 		<h2>Latest News</h2>
 		<h1>Persona 3 Reload</h1>
@@ -224,6 +226,11 @@
 	document.getElementById("trailer1").innerHTML="2";
 	}
   }	
+	function showResume(){
+	var imagi = document.getElementById("resume");
+	imagi.src="resume.png";
+	imagi.style="width:600px;height:900px;";
+  }
 	</script>
 		</article>
 	</section>
